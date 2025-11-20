@@ -1,0 +1,197 @@
+  body {
+    margin: 0;
+    font-family: "Segoe UI", "Hiragino Kaku Gothic ProN", sans-serif;
+    background-color: #e6f0ff;
+    color: #003366;
+    line-height: 1.6;
+  }
+  header {
+    background-color: #004aad;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+  }
+  header h1 {
+    margin: 0;
+    font-size: 2.2em;
+  }
+  header p {
+    margin: 8px 0 0;
+    font-weight: 500;
+    font-size: 1.1em;
+  }
+  main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  section {
+    margin-bottom: 50px;
+  }
+  h2 {
+    border-bottom: 2px solid #004aad;
+    padding-bottom: 6px;
+    font-weight: 600;
+    font-size: 1.75em;
+  }
+  p {
+    margin-top: 15px;
+    font-size: 1.1em;
+  }
+  a.button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background-color: #004aad;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+  a.button:hover {
+    background-color: #003366;
+  }
+  footer {
+    background-color: #00264d;
+    color: #99bbff;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 0.9em;
+  }
+
+  /* 省略部分は前と同じ */
+  main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  section {
+    margin-bottom: 50px;
+  }
+  h2 {
+    border-bottom: 2px solid #004aad;
+    padding-bottom: 6px;
+    font-weight: 600;
+    font-size: 1.75em;
+  }
+  main p {
+    margin-top: 15px;
+    font-size: 1.3em; /* ここを大きく */
+  }
+  a.button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background-color: #004aad;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+  a.button:hover {
+    background-color: #003366;
+  }
+  .footer-social {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.1);
+  color: #000;
+  transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+  background: #1da1f2; /* Xのテーマカラー例 */
+  color: #fff;
+  transform: translateY(-3px);
+}
+/*メインここまで*/
+/* ハンバーガーメニューアイコン */
+.menu-button {
+  position: absolute;
+  top: 36px;
+  right: 36px;
+  width: 38px;
+  height: 38px;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+}
+.menu-button::before, .menu-button::after, .menu-button span {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 4px;
+  background: #fff;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+.menu-button span {
+  background: #fff;
+}
+.menu-button::before {
+  margin-top: 0;
+}
+.menu-button::after {
+  margin-bottom: 0;
+}
+
+/* ナビゲーションの位置とスタイル */
+.main-nav {
+  position: fixed;
+  top: 0;
+  right: -320px;      /* 非表示時は右側へ */
+  width: 280px;
+  height: 100%;
+  background: #004aad;
+  color: #fff;
+  box-shadow: -3px 0 16px rgba(0,0,0,0.12);
+  z-index: 1000;
+  transition: right 0.35s cubic-bezier(.63,-0.08,.39,1.13);
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding-top: 80px;
+}
+.main-nav.open {
+  right: 0;
+}
+.main-nav ul {
+  list-style: none;
+  padding: 0 24px;
+  margin: 0;
+}
+.main-nav ul li {
+  margin: 20px 0;
+}
+.main-nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  transition: color 0.2s;
+}
+.main-nav ul li a:hover {
+  color: #ffcc00;
+}
+header {
+  position: relative;
+}
+/* PC用、必要に応じてレスポンシブにも対応 */
