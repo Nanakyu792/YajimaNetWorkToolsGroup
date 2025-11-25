@@ -1,2 +1,2 @@
 # Yahho-
-Owner is nanakyu kamo.
+Owner is nanakyu kamo?
