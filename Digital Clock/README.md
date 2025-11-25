@@ -6,5 +6,6 @@ Please open the **"digital clock.html"**.
 
 **"calender.html"** ,**"timer.html"** and **"stop_watch.html"** is imported into **"digital clock.html"** via <iframe>.
 
+this is a clone https://github.com/nanakyu792/Digital%20Clock.gut
 
 ### IM JAPANESE!
