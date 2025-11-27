@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -26,6 +27,32 @@
     margin: 8px 0 0;
     font-weight: 500;
     font-size: 1.1em;
+  }
+  nav.global-nav {
+    background: #003366;
+    color: white;
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    font-weight: 600;
+    font-size: 1.15em;
+    border-bottom: 2px solid #004aad;
+    flex-wrap: wrap;
+  }
+  nav.global-nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 18px 0;
+    position: relative;
+    transition: color 0.25s;
+  }
+  nav.global-nav a:hover,
+  nav.global-nav a:focus {
+    color: #a6c8ff;
+  }
+  nav.global-nav a.active {
+    border-bottom: 3px solid #1da1f2;
+    color: #1da1f2;
   }
   main {
     max-width: 900px;
@@ -66,88 +93,77 @@
     padding: 20px 10px;
     font-size: 0.9em;
   }
-
-  /* 省略部分は前と同じ */
-  main {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 0 20px;
-  }
-  section {
-    margin-bottom: 50px;
-  }
-  h2 {
-    border-bottom: 2px solid #004aad;
-    padding-bottom: 6px;
-    font-weight: 600;
-    font-size: 1.75em;
-  }
   main p {
     margin-top: 15px;
-    font-size: 1.3em; /* ここを大きく */
-  }
-  a.button {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 30px;
-    background-color: #004aad;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: 600;
-    transition: background-color 0.3s ease;
-  }
-  a.button:hover {
-    background-color: #003366;
+    font-size: 1.3em;
   }
   .footer-social {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  padding: 1rem 0;
-}
-
-.footer-social a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: rgba(0, 0, 0, 0.1);
-  color: #000;
-  transition: all 0.3s ease;
-}
-
-.footer-social a:hover {
-  background: #1da1f2; /* Xのテーマカラー例 */
-  color: #fff;
-  transform: translateY(-3px);
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    padding: 1rem 0;
+  }
+  .footer-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.1);
+    color: #000;
+    transition: all 0.3s ease;
+  }
+  .footer-social a:hover {
+    background: #1da1f2;
+    color: #fff;
+    transform: translateY(-3px);
+  }
+  /* --- 追記：スマホ対応（レスポンシブ化） --- */
+@media (max-width: 700px) {
+  nav.global-nav {
+    gap: 8px;           /* gapをさらに縮小 */
+    font-size: 0.9em;   /* フォントサイズもやや縮小 */
+    /* flex-direction: column; */
+    /* align-items: center; */
+    flex-wrap: wrap;    /* 必要なら wrap を保つ */
+  }
+  nav.global-nav a {
+    padding: 10px 3px;  /* パディングも小さく */
+    font-size: 1em;
+    min-width: 60px;    /* 必要なら最小幅も調整 */
+  }
 }
 </style>
 </head>
 <body>
   <header>
-    
     <h1>YajimaNetWorkTools株式会社</h1>
     <p>より楽しく、より面白いをモットーに</p>
   </header>
+  <nav class="global-nav">
+    <a href="index.html" class="active">ホーム</a>
+    <a href="#about">企業理念</a>
+    <a href="#business">事業内容</a>
+    <a href="index2.html">お問い合わせ</a>
+    <a href="tools.html">Tools</a>
+  </nav>
   <main>
-    <section><br>
-        <h2>企業理念</h2>
-    <div style="float:left; width:36%; max-width:280px; min-width:160px; margin:0 20px 20px 0;">
-      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=900&q=80" alt="チームでのビジネスミーティング" style="width:100%; height:auto; border-radius:8px; display:block;">
-    </div>
+    <section id="about"><br>
+      <h2>企業理念</h2>
+      <div class="image-wrap" style="float:left; width:36%; max-width:280px; min-width:160px; margin:0 20px 20px 0;">
+        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=900&q=80" alt="チームでのビジネスミーティング" style="width:100%; height:auto; border-radius:8px;">
+      </div>
       <p>
         YajimaNetWorktools株式会社は、技術と創造性を融合し、日々の暮らしをより楽しく面白く変えることを目指します。  
         革新的なサービスとコミュニティ作りでお客様に寄り添います。
       </p>
     </section><br><br>
-    <section>
-        <h2>事業内容</h2>
-    <div style="float:left; width:40%; max-width:280px; min-width:160px; margin:0 20px 20px 0;">
-      <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=900&q=80" alt="テクノロジーとアイデア" style="width:100%; height:auto; border-radius:8px; display:block;">
-    </div>
+    <section id="business">
+      <h2>事業内容</h2>
+      <div class="image-wrap" style="float:left; width:40%; max-width:280px; min-width:160px; margin:0 20px 20px 0;">
+        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=900&q=80" alt="テクノロジーとアイデア" style="width:100%; height:auto; border-radius:8px;">
+      </div>
       <p>
         Webサービスの企画・開発・運営、ITコンサルティング、デジタルコンテンツ制作を中心に幅広く展開しています。  
         最新技術を活用し、ユーザーの創造力を刺激するサービスを提供します。
@@ -155,13 +171,13 @@
       <a href="index2.html" class="button">お問い合わせはこちら</a>
     </section>
   </main>
-     <footer>
+  <footer>
     <div style="padding:16px; border-radius:8px; max-width:900px; margin:0 auto;">
       <div class="footer-social" style="justify-content:center; gap:1rem; padding:0.25rem 0; display:flex;">
-        <a href="https://x.com/YajimaNetworks" target="_blank" rel="noopener noreferrer" aria-label="Twitter" style="background:#e6f2ff; color:#1da1f2; width:44px; height:44px; display:inline-flex; align-items:center; justify-content:center; border-radius:50%; text-decoration:none;">
+        <a href="https://x.com/YajimaNetworks" target="_blank" rel="noopener noreferrer" aria-label="Twitter" style="background:#e6f2ff; color:#1da1f2; width:44px; height:44px; display:inline-flex; align-items:center; justify-content:center; border-radius:50%;">
           <img src="Logo_of_Twitter.svg" alt="Twitter" width="20" height="20" style="display:block;">
         </a>
-        <a href="https://instagram.com/yajimanetworks" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="background:linear-gradient(45deg,#fdf497,#fd5949,#d6249f); color:#fff; width:44px; height:44px; display:inline-flex; align-items:center; justify-content:center; border-radius:50%; text-decoration:none;">
+        <a href="https://instagram.com/yajimanetworks" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="background:linear-gradient(45deg,#fdf497,#fd5949,#d6249f); color:#fff; width:44px; height:44px; display:inline-flex; align-items:center; justify-content:center; border-radius:50%;">
           <img src="insta.jpg" alt="Instagram" width="20" height="20" style="display:block;">
         </a>
       </div>
@@ -170,12 +186,3 @@
   </footer>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
