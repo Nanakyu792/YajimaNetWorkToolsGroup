@@ -37,6 +37,9 @@ nav.global-nav {
   font-size: 1.15em;
   border-bottom: 2px solid #888;
   flex-wrap: wrap;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
 }
 nav.global-nav a {
   color: #222;
@@ -44,6 +47,8 @@ nav.global-nav a {
   padding: 18px 0;
   position: relative;
   transition: color 0.25s;
+  min-width: 80px; /* 横幅を確保して見やすく */
+  display: inline-block; /* 横並び＆スクロール対応 */
 }
 nav.global-nav a:hover,
 nav.global-nav a:focus {
@@ -123,12 +128,15 @@ main p {
   nav.global-nav {
     gap: 8px;
     font-size: 0.9em;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    white-space: nowrap;
   }
   nav.global-nav a {
     padding: 10px 3px;
     font-size: 1em;
     min-width: 60px;
+    display: inline-block; /* 横スクロール対応を明示 */
   }
 }
 </style>
@@ -139,12 +147,13 @@ main p {
     <p>より楽しく、より面白いをモットーに</p>
   </header>
   <nav class="global-nav">
-    <a href="index.html" class="active">ホーム</a>
-    <a href="#about">企業理念</a>
-    <a href="#business">事業内容</a>
-    <a href="index2.html">お問い合わせ</a>
-    <a href="tools.html">Tools</a>
-  </nav>
+  <a href="index.html" class="active">ホーム</a>
+  <a href="#overview">会社概要</a><!-- 追加 -->
+  <a href="#about">企業理念</a>
+  <a href="#business">事業内容</a>
+  <a href="index2.html">お問い合わせ</a>
+  <a href="tools.html">Tools</a>
+</nav>
   <main>
     <section id="about"><br>
       <h2>企業理念</h2>
